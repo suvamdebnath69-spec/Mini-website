@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090909;
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ---------------- NAVIGATION ---------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background: rgba(9, 9, 9, 0.9);
+    border-bottom: 1px solid #222;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+    max-width: 1100px;
+    min-height: 90vh;
+
+    margin: auto;
+    padding: 120px 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+.small-text,
+.section-label {
+    color: #9cff57;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 0.95;
+
+    margin: 20px 0;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #9cff57;
+}
+
+.description {
+    max-width: 600px;
+
+    color: #999;
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ---------------- BUTTONS ---------------- */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    background: #9cff57;
+    color: #090909;
+
+    text-decoration: none;
+
+    border: 1px solid #9cff57;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button.secondary {
+    background: transparent;
+    color: white;
+    border-color: #333;
+}
+
+
+/* ---------------- SECTIONS ---------------- */
+
+.section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 120px 20px;
+}
+
+.section h2 {
+    font-size: clamp(40px, 6vw, 70px);
+
+    letter-spacing: -3px;
+
+    margin: 15px 0 40px;
+}
+
+
+/* ---------------- ABOUT ---------------- */
+
+.about-content {
+    max-width: 650px;
+
+    color: #999;
+
+    font-size: 18px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+
+/* ---------------- PROJECTS ---------------- */
+
+.projects {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.project-card {
+    min-height: 300px;
+
+    padding: 30px;
+
+    background: #111;
+
+    border: 1px solid #242424;
+
+    transition: 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #9cff57;
+}
+
+.project-number {
+    color: #555;
+
+    font-size: 12px;
+}
+
+.project-card h3 {
+    font-size: 30px;
+
+    margin: 45px 0 10px;
+}
+
+.project-card p {
+    color: #888;
+
+    font-size: 14px;
+}
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+.tags span {
+    padding: 5px 9px;
+
+    border: 1px solid #333;
+
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+
+/* ---------------- SKILLS ---------------- */
+
+.skills {
+    max-width: 700px;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+}
+
+.bar {
+    height: 5px;
+
+    background: #222;
+}
+
+.progress {
+    height: 100%;
+
+    background: #9cff57;
+}
+
+.python {
+    width: 70%;
+}
+
+.html {
+    width: 80%;
+}
+
+.javascript {
+    width: 45%;
+}
+
+.ai {
+    width: 55%;
+}
+
+
+/* ---------------- CONTACT ---------------- */
+
+.contact {
+    min-height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.contact p {
+    color: #888;
+
+    max-width: 500px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 20px 50px;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 80vh;
+
+        padding-top: 80px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+.logo{
+color:green;
+text-shadow:#f2f2f2;
+
+}
